@@ -74,120 +74,122 @@
     </div>
 
     <!-- products section -->
-    <div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div
+      x-data="{
+        products: [
+            {id:1 , title: 'ساعت هوشمند سری ۶' , price:'۴۸,۲۵۰,۰۰۰'},
+            {id:2 , title: 'ساعت هوشمند سری ۳' , price:'۲,۲۵۰,۰۰۰'},
+            {id:3 , title: 'ساعت هوشمند سری ۸' , price:'۴۸,۲۵۰,۰۰۰'},
+            {id:4 , title: 'ساعت هوشمند سری ۲' , price:'۸,۲۵۰,۰۰۰'},
+            {id:5 , title: 'ساعت هوشمند سری ۵' , price:'۴۸,۲۲۰,۰۰۰'},
+            {id:6 , title: 'ساعت هوشمند سری ۴' , price:'۴,۲۵۰,۰۰۰'},
+            {id:7 , title: 'ساعت هوشمند سری ۸' , price:'۲۸,۲۲۰,۰۰۰'},
+            {id:8 , title: 'ساعت هوشمند سری ۶' , price:'۴۵,۲۵۰,۰۰۰'}
+        ]
+    }"
+      class="grid gap-x-2 gap-y-4 sm:gap-x-4 sm:gap-y-6 md:gap-x-6 md:gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+    >
       <!-- product -->
-      <div class="bg-white rounded-xl p-2 shadow-xl">
-        <div class="mb-5 bg-slate-200 rounded-lg p-2 flex justify-center items-center">
-          <img src="../assets/images/Cart/1.png" alt="Cart image" />
-        </div>
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-stone-200 font-medium text-sm">اپل</span>
-          <div x-data="{color : 'green'}" class="flex">
-            <div
-              @click="color = 'orange'"
-              :class="color === 'orange' ? 'ring-2 ring-orange-400' : '' "
-              class="w-6 h-6 bg-orange-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center"
-            >
-              <svg
-                x-show="color === 'orange' "
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 text-white"
+      <template x-for="product in products" :key="product.id">
+        <div class="bg-white rounded-xl p-2 shadow-xl">
+          <div
+            class="mb-5 bg-slate-200 rounded-lg p-2 flex justify-center items-center"
+          >
+            <img src="../assets/images/Cart/2.png" alt="Cart image" />
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-stone-200 font-medium text-sm">اپل</span>
+            <div x-data="{color : 'green'}" class="flex">
+              <div
+                @click="color = 'orange'"
+                :class="color === 'orange' ? 'ring-2 ring-orange-400' : '' "
+                class="w-6 h-6 bg-orange-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div
-              @click="color = 'yellow'"
-              :class="color === 'yellow' ? 'ring-2 ring-yellow-400' : '' "
-              class="w-6 h-6 bg-yellow-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center -mr-1.5"
-            >
-              <svg
-                x-show="color === 'yellow' "
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 text-white"
+                <svg
+                  x-show="color === 'orange' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-4 h-4 text-white"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                @click="color = 'yellow'"
+                :class="color === 'yellow' ? 'ring-2 ring-yellow-400' : '' "
+                class="w-6 h-6 bg-yellow-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center -mr-1.5"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div
-              @click="color = 'indigo'"
-              :class="color === 'indigo' ? 'ring-2 ring-indigo-400' : '' "
-              class="w-6 h-6 bg-indigo-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center -mr-1.5"
-            >
-              <svg
-                x-show="color === 'indigo' "
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 text-white"
+                <svg
+                  x-show="color === 'yellow' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-4 h-4 text-white"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                @click="color = 'indigo'"
+                :class="color === 'indigo' ? 'ring-2 ring-indigo-400' : '' "
+                class="w-6 h-6 bg-indigo-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center -mr-1.5"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div
-              @click="color = 'green'"
-              :class="color === 'green' ? 'ring-2 ring-green-400' : '' "
-              class="w-6 h-6 bg-green-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center -mr-1.5"
-            >
-              <svg
-                x-show="color === 'green' "
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-4 h-4 text-white"
+                <svg
+                  x-show="color === 'indigo' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-4 h-4 text-white"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                @click="color = 'green'"
+                :class="color === 'green' ? 'ring-2 ring-green-400' : '' "
+                class="w-6 h-6 bg-green-400 rounded-full cursor-pointer border-2 border-white flex justify-center items-center -mr-1.5"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+                <svg
+                  x-show="color === 'green' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-4 h-4 text-white"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
+          <div x-text="product.title" class="text-slate-900 font-medium text-sm mb-2">
+          </div>
+          <div class="text-orange-700 font-medium text-end mb-2">
+            <span x-text="product.price"></span>
+            <span>تومان</span>
+          </div>
+          <hr class="mb-2" />
+          <button class="w-full text-center font-bold text-orange-400 p-1.5">
+            مشاهده و سفارش
+          </button>
         </div>
-        <div class="text-slate-900 font-medium text-sm mb-2">
-          ساعت هوشمند اپل سری ۶
-        </div>
-        <div class="text-orange-700 font-medium text-end mb-2">
-          <span>۴۸,۲۵۰,۰۰۰</span>
-          <span>تومان</span>
-        </div>
-        <hr class="mb-2" />
-        <button class="w-full text-center font-bold text-orange-400 p-1.5">
-          مشاهده و سفارش
-        </button>
-      </div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
-      <div class="bg-blue-300">محصولات</div>
+      </template>
     </div>
 
     <!-- alpine js -->
