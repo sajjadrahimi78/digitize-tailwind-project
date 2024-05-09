@@ -178,9 +178,10 @@
           <div class="">
             <div class="text-orange-400 font-bold text-xl mb-5">فیلتر</div>
             <!-- ACC No.1 -->
-            <div class="">
+            <div x-data="{openBrand : true}" class="mb-4">
               <!-- ACC #1 header -->
               <div
+                @click="openBrand = !openBrand"
                 class="flex items-center justify-between w-full hover:bg-gray-50 p-2 cursor-pointer rounded-md mb-4"
               >
                 <div class="flex">
@@ -220,7 +221,8 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="w-7 h-7"
+                  class="w-5 h-5 transition-all duration-500"
+                  :class="openBrand ? 'rotate-180' : ''"
                 >
                   <path
                     fillRule="evenodd"
@@ -230,38 +232,237 @@
                 </svg>
               </div>
               <!-- ACC #1 content -->
-              <div class="px-2">
-                <label for="apple" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="apple" />
+              <div x-show="openBrand === true" class="px-2">
+                <label
+                  for="apple"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="apple"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
                   <span class="mr-2">اپل</span>
                 </label>
-                <label for="apple" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="samsung" />
+                <label
+                  for="samsung"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="samsung"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
                   <span class="mr-2">سامسونگ</span>
                 </label>
-                <label for="apple" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="xiaomi" />
+                <label
+                  for="xiaomi"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="xiaomi"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
                   <span class="mr-2">شیائومی</span>
                 </label>
-                <label for="apple" class="py-1 flex items-center cursor-pointer">
-                  <input type="checkbox" name="brand" id="huawei" />
+                <label
+                  for="huawei"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="huawei"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
                   <span class="mr-2">هواوی</span>
                 </label>
               </div>
             </div>
             <!-- ACC No.2 -->
-            <div class="">
+            <div x-data="{openColor : true}" class="mb-4">
               <!-- ACC #2 header -->
-              <div class=""></div>
+              <div
+                @click="openColor = !openColor"
+                class="flex items-center justify-between w-full hover:bg-gray-50 p-2 cursor-pointer rounded-md mb-4"
+              >
+                <div class="flex">
+                  <svg
+                    width="21"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.525 10.608v8.657a2.57 2.57 0 0 1-.73 1.79l-.026.025a2.024 2.024 0 0 1-.18.16c-.192.167-.41.296-.635.385-.07.032-.141.058-.212.084-.25.083-.519.122-.782.122-.173 0-.346-.02-.513-.052-.083-.02-.167-.038-.25-.064a2.32 2.32 0 0 1-.295-.109c0-.006 0-.006-.006 0a3.223 3.223 0 0 1-.513-.314l-.007-.007a1.761 1.761 0 0 1-.23-.205c-.071-.077-.142-.154-.212-.237a3.23 3.23 0 0 1-.315-.513c.007-.006.007-.006 0-.006 0 0 0-.007-.006-.013a3.661 3.661 0 0 1-.103-.282 2.729 2.729 0 0 1-.115-.763v-8.658c0-.962.641-1.603 1.603-1.603h1.924c.962 0 1.603.641 1.603 1.603Z"
+                      stroke="#222F5D"
+                      stroke-width=".962"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14.22 18.303v1.924c0 .962-.64 1.603-1.602 1.603H3.96c.263 0 .533-.038.783-.121.07-.026.14-.052.211-.084.225-.09.443-.218.635-.384.058-.045.122-.103.18-.16l.026-.026 4.36-4.355h2.463c.962 0 1.603.642 1.603 1.603ZM3.197 21.715a2.46 2.46 0 0 1-1.051-.635 2.46 2.46 0 0 1-.635-1.052c.25.802.885 1.437 1.686 1.687Z"
+                      stroke="#222F5D"
+                      stroke-width=".962"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.893 14.962 10.155 16.7l-4.36 4.354a2.57 2.57 0 0 0 .73-1.79V13.07l1.738-1.738c.68-.68 1.59-.68 2.27 0l1.36 1.36c.68.68.68 1.59 0 2.27ZM3.96 19.907a.641.641 0 1 0 0-1.283.641.641 0 0 0 0 1.283Z"
+                      stroke="#222F5D"
+                      stroke-width=".962"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="10.556"
+                      cy="10.47"
+                      r="10.444"
+                      fill="#AFAFAF"
+                      fill-opacity=".29"
+                    />
+                  </svg>
+                  <span class="mr-2">رنگ محصول</span>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-5 h-5 transition-all duration-500"
+                  :class="openColor ? 'rotate-180' : ''"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
               <!-- ACC #2 content -->
-              <div class=""></div>
+              <div x-show="openColor === true" class="px-2">
+                <label for="red" class="py-1 flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="red"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
+                  <span class="mr-2">قرمز</span>
+                </label>
+                <label for="blue" class="py-1 flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="blue"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
+                  <span class="mr-2">آبی</span>
+                </label>
+                <label
+                  for="yellow"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="yellow"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
+                  <span class="mr-2">زرد</span>
+                </label>
+                <label
+                  for="green"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="green"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
+                  <span class="mr-2">سبز</span>
+                </label>
+                <label
+                  for="purple"
+                  class="py-1 flex items-center cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="purple"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
+                  <span class="mr-2">بنفش</span>
+                </label>
+                <label for="pink" class="py-1 flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="pink"
+                    class="form-checkbox rounded text-orange-400 focus:ring-orange-400"
+                  />
+                  <span class="mr-2">صورتی</span>
+                </label>
+              </div>
             </div>
             <!-- ACC No.3 -->
-            <div class="">
+            <div x-data="{openPrice : true}" class="mb-4">
               <!-- ACC #3 header -->
-              <div class=""></div>
+              <div
+                @click="openPrice = !openPrice"
+                class="flex items-center justify-between w-full hover:bg-gray-50 p-2 cursor-pointer rounded-md mb-4"
+              >
+                <div class="flex">
+                  <svg
+                    width="21"
+                    height="21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.523 14.904c-.245.239-.385.583-.35.95.053.63.63 1.091 1.26 1.091h1.109v.695a2.198 2.198 0 0 1-2.194 2.193H3.652a2.198 2.198 0 0 1-2.194-2.193v-3.926c0-1.208.986-2.194 2.194-2.194h6.696c1.208 0 2.194.986 2.194 2.194v.84h-1.179c-.326 0-.624.128-.84.35Z"
+                      stroke="#222F5D"
+                      stroke-width=".875"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M1.458 14.239v-2.666c0-.694.426-1.313 1.074-1.558l4.631-1.75c.724-.274 1.5.263 1.5 1.039v2.216M13.16 15.15v1.2c0 .322-.257.584-.584.596h-1.143c-.63 0-1.208-.461-1.26-1.091a1.172 1.172 0 0 1 .35-.95c.216-.223.513-.35.84-.35h1.213a.599.599 0 0 1 .583.594ZM4.083 14h4.084"
+                      stroke="#222F5D"
+                      stroke-width=".875"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <circle
+                      cx="11.5"
+                      cy="9.5"
+                      r="9.5"
+                      fill="#AFAFAF"
+                      fill-opacity=".29"
+                    />
+                  </svg>
+                  <span class="mr-2">محدوده قیمت</span>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-5 h-5 transition-all duration-500"
+                  :class="openPrice ? 'rotate-180' : ''"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
               <!-- ACC #3 content -->
-              <div class=""></div>
+              <div x-show="openPrice === true" class="px-2"></div>
             </div>
           </div>
         </div>
