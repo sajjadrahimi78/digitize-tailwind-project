@@ -595,6 +595,9 @@ video {
 .col-span-9{
   grid-column: span 9 / span 9;
 }
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
 .row-span-2{
   grid-row: span 2 / span 2;
 }
@@ -634,6 +637,12 @@ video {
 }
 .mt-10{
   margin-top: 2.5rem;
+}
+.ml-3{
+  margin-left: 0.75rem;
+}
+.ml-0{
+  margin-left: 0px;
 }
 .flex{
   display: flex;
@@ -689,6 +698,12 @@ video {
 .w-full{
   width: 100%;
 }
+.w-8{
+  width: 2rem;
+}
+.w-20{
+  width: 5rem;
+}
 .flex-1{
   flex: 1 1 0%;
 }
@@ -716,6 +731,9 @@ video {
 }
 .gap-8{
   gap: 2rem;
+}
+.gap-6{
+  gap: 1.5rem;
 }
 .gap-x-2{
   -moz-column-gap: 0.5rem;
@@ -810,6 +828,9 @@ video {
 .p-6{
   padding: 1.5rem;
 }
+.p-4{
+  padding: 1rem;
+}
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -833,6 +854,22 @@ video {
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .pr-4{
   padding-right: 1rem;
@@ -861,6 +898,10 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-bold{
   font-weight: 700;
 }
@@ -869,6 +910,9 @@ video {
 }
 .font-normal{
   font-weight: 400;
+}
+.font-light{
+  font-weight: 300;
 }
 .text-gray-300{
   --tw-text-opacity: 1;
@@ -1001,6 +1045,10 @@ video {
   .sm\:gap-y-6{
     row-gap: 1.5rem;
   }
+  .sm\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1032,6 +1080,18 @@ video {
   .md\:gap-y-8{
     row-gap: 2rem;
   }
+  .md\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .md\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 @media (min-width: 1024px){
   .lg\:col-span-10{
@@ -1042,5 +1102,36 @@ video {
   }
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .lg\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+@media (min-width: 1280px){
+  .xl\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+  .xl\:col-span-10{
+    grid-column: span 10 / span 10;
+  }
+}
+@media (min-width: 1536px){
+  .\32xl\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+  .\32xl\:col-span-10{
+    grid-column: span 10 / span 10;
+  }
+  .\32xl\:max-w-screen-2xl{
+    max-width: 1536px;
   }
 }

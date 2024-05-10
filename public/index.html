@@ -6,9 +6,9 @@
     <title>Digitize App | Shop</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
   </head>
-  <body class="bg-gray-100 px-4 container mx-auto">
+  <body class="bg-gray-100">
     <!-- app bar -->
-    <header class="flex md:hidden items-center justify-between mt-10 mb-6">
+    <header class="flex md:hidden items-center justify-between mt-10 mb-6 px-4">
       <div class="">
         <img src="/assets/images/logo/Logo.png" alt="logo" />
       </div>
@@ -34,7 +34,7 @@
     </header>
 
     <!-- filter - sort mobile section -->
-    <div class="flex md:hidden justify-between items-center gap-x-2 mb-10">
+    <div class="flex md:hidden justify-between items-center gap-x-2 mb-10 px-4">
       <div class="flex flex-1 gap-x-2 bg-white p-2 rounded">
         <div class="text-orange-600">
           <svg
@@ -52,7 +52,7 @@
             />
           </svg>
         </div>
-        <span class="text-sm font-medium text-slate-800">محبوب‌ترین محصول</span>
+        <span class="text-sm font-medium text-slate-800">محبوب‌ترین</span>
       </div>
       <div class="flex flex-1 gap-x-2 bg-white p-2 rounded">
         <div class="text-gray-300">
@@ -77,70 +77,70 @@
 
     <!-- navbar -->
     <nav
-      class="hidden md:flex items-center p-2 gap-x-4 bg-white shadow-lg sticky top-0 z-50 mb-6"
+      class="hidden md:block p-2 gap-x-4 bg-white shadow-lg sticky top-0 z-50 mb-6 px-4"
     >
-
-    <!-- menu -->
-      <div class="flex flex-1 p-2 items-center">
-        <span class="ml-6 py-4">
-          <img src="/assets/images/logo/Desktop Logo.png" alt="dacktop logo" />
-        </span>
-        <ul class="flex items-center w-full text-lg gap-x-2">
-          <li
-            class="flex px-4 py-4 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
-          >
-            <a href="#">خانه</a>
-          </li>
-          <li
-            class="flex px-4 py-4 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
-          >
-            <a href="#">تلفن همراه</a>
-          </li>
-          <li
-            class="flex px-4 py-4 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
-          >
-            <a href="#">لپ تاپ</a>
-          </li>
-          <li
-            class="flex px-4 py-4 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
-          >
-            <a href="#">ساعت هوشمند</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- search -->
-      <div class="flex flex-1">
-        <div class="w-full px-4 relative">
-          <span class="absolute top-4 right-6">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-slate-800 font-medium"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
+      <div class="container mx-auto 2xl:max-w-screen-2xl flex items-center">
+        <!-- menu -->
+        <div class="flex flex-1 items-center">
+          <span class="py-4 w-20">
+            <img
+              src="/assets/images/logo/Desktop Logo.png"
+              alt="dacktop logo"
+            />
           </span>
-          <input
-            type="search"
-            class="w-full bg-stone-100 py-4 px-5 pr-12 rounded-lg focus:outline-none outline-0 text-slate-800"
-            placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
-          />
+          <ul class="flex items-center w-full text-sm lg:text-lg font-normal">
+            <li
+              class="flex p-2 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
+            >
+              <a href="#">خانه</a>
+            </li>
+            <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <a href="#">تلفن همراه</a>
+            </li>
+            <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <a href="#">لپ تاپ</a>
+            </li>
+            <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <a href="#">ساعت هوشمند</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- search -->
+        <div class="flex flex-1">
+          <div class="w-full relative">
+            <span class="absolute top-4 right-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-slate-800 font-medium"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </span>
+            <input
+              type="search"
+              class="w-full bg-stone-100 py-4 px-5 pr-12 rounded-lg focus:outline-none outline-0 text-slate-800"
+              placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+            />
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] gap-8">
+    <div
+      class="xl:px-8 container mx-auto 2xl:max-w-screen-2xl grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] gap-6"
+    >
       <!-- sidebar -->
-      <div class="hidden md:block col-span-3 row-span-2 lg:col-span-2">
-        <div class="bg-white p-6 rounded-lg">
+      <div class="hidden md:block col-span-3 row-span-2 2xl:col-span-2">
+        <div class="bg-white py-6 px-2 rounded-lg">
           <!-- categories -->
           <div class="mb-7">
             <div class="text-orange-400 font-bold text-xl mb-5">دستع بندی</div>
@@ -148,10 +148,7 @@
               <li
                 class="font-normal hover:bg-gray-50 cursor-pointer rounded-md"
               >
-                <a
-                  href="#"
-                  class="flex items-center text-lg text-slate-800 py-2 mb-2"
-                >
+                <a href="#" class="flex items-center text-slate-800 py-2 mb-2">
                   <span class="w-7 h-7 rounded-full bg-gray-100 relative">
                     <svg
                       class="w-4 h-5 absolute bottom-0 left-0"
@@ -180,10 +177,7 @@
               <li
                 class="font-normal hover:bg-gray-50 cursor-pointer rounded-md"
               >
-                <a
-                  href="#"
-                  class="flex items-center text-lg text-slate-800 py-2 mb-2"
-                >
+                <a href="#" class="flex items-center text-slate-800 py-2 mb-2">
                   <span class="w-7 h-7 rounded-full bg-gray-50 relative">
                     <svg
                       class="w-4 h-5 absolute bottom-0 left-0"
@@ -204,10 +198,7 @@
               <li
                 class="font-normal hover:bg-gray-50 cursor-pointer rounded-md"
               >
-                <a
-                  href="#"
-                  class="flex items-center text-lg text-slate-800 py-2"
-                >
+                <a href="#" class="flex items-center text-slate-800 py-2">
                   <span class="w-7 h-7 rounded-full bg-gray-50 relative">
                     <svg
                       class="w-4 h-5 absolute bottom-0 left-0"
@@ -531,10 +522,10 @@
       </div>
 
       <!-- sort section -->
-      <div class="hidden md:block col-span-9 lg:col-span-10">
+      <div class="hidden md:block col-span-9 2xl:col-span-10">
         <div
           x-data="{sort : 1 , activeClass : 'text-slate-800 font-bold '}"
-          class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg font-medium"
+          class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg font-normal"
         >
           <div
             class="text-orange-400 bg-orange-100 w-9 h-9 flex items-center justify-center rounded-md"
@@ -559,7 +550,7 @@
             :class="sort === 1 ? activeClass : ''"
             class="py-4 relative"
           >
-            <span>محبوب‌ترین محصول</span>
+            <span class="text-base">محبوب‌ترین</span>
             <span
               x-show="sort === 1"
               class="w-1.5 h-1.5 bg-orange-600 rounded-full absolute top-100 -left-100"
@@ -570,7 +561,7 @@
             :class="sort === 2 ? activeClass : ''"
             class="py-4"
           >
-            <span>پربازدیدترین محصول</span>
+            <span>پربازدیدترین</span>
             <span
               x-show="sort === 2"
               class="w-1.5 h-1.5 bg-orange-600 rounded-full absolute top-100 -left-100"
@@ -581,7 +572,7 @@
             :class="sort === 3 ? activeClass : ''"
             class="py-4"
           >
-            <span>گران‌ترین محصول</span>
+            <span>گران‌ترین</span>
             <span
               x-show="sort === 3"
               class="w-1.5 h-1.5 bg-orange-600 rounded-full absolute top-100 -left-100"
@@ -592,7 +583,7 @@
             :class="sort === 4 ? activeClass : ''"
             class="py-4"
           >
-            <span>ارزان‌ترین محصول</span>
+            <span>ارزان‌ترین</span>
             <span
               x-show="sort === 4"
               class="w-1.5 h-1.5 bg-orange-600 rounded-full absolute top-100 -left-100"
@@ -602,7 +593,7 @@
       </div>
 
       <!-- products section -->
-      <div class="col-span-12 md:col-span-9 lg:col-span-10">
+      <div class="col-span-12 md:col-span-9 2xl:col-span-10">
         <div
           x-data="{
         products: [
@@ -616,7 +607,7 @@
             {id:8 , title: 'ساعت هوشمند سری ۶' , price:'۴۵,۲۵۰,۰۰۰'}
         ]
     }"
-          class="grid gap-x-2 gap-y-4 sm:gap-x-4 sm:gap-y-6 md:gap-x-6 md:gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          class="grid gap-x-2 gap-y-4 sm:gap-x-4 sm:gap-y-6 md:gap-x-6 md:gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 sm:px-0"
         >
           <!-- product -->
           <template x-for="product in products" :key="product.id">
