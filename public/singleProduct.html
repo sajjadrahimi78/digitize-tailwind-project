@@ -50,6 +50,66 @@
       </div>
     </header>
 
+     <!-- navbar -->
+     <nav
+     class="hidden md:block p-2 gap-x-4 bg-white shadow-lg sticky top-0 z-50 mb-6 px-4"
+   >
+     <div class="container mx-auto 2xl:max-w-screen-2xl flex items-center">
+       <!-- menu -->
+       <div class="flex flex-1 items-center">
+         <span class="py-4 w-20">
+           <img
+             src="/assets/images/logo/Desktop Logo.png"
+             alt="dacktop logo"
+           />
+         </span>
+         <ul class="flex items-center w-full text-sm lg:text-lg font-normal">
+           <li
+             class="flex p-2 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
+           >
+             <a href="#">خانه</a>
+           </li>
+           <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+             <a href="#">تلفن همراه</a>
+           </li>
+           <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+             <a href="#">لپ تاپ</a>
+           </li>
+           <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+             <a href="#">ساعت هوشمند</a>
+           </li>
+         </ul>
+       </div>
+
+       <!-- search -->
+       <div class="flex flex-1">
+         <div class="w-full relative">
+           <span class="absolute top-4 right-6">
+             <svg
+               xmlns="http://www.w3.org/2000/svg"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke-width="1.5"
+               stroke="currentColor"
+               class="w-6 h-6 text-slate-800 font-medium"
+             >
+               <path
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+               />
+             </svg>
+           </span>
+           <input
+             type="search"
+             class="w-full bg-stone-100 py-4 px-5 pr-12 rounded-lg focus:outline-none outline-0 text-slate-800"
+             placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+           />
+         </div>
+       </div>
+     </div>
+   </nav>
+
     <!-- bread crumbs -->
     <div class="flex items-center gap-2 mb-6 px-4">
       <span class="text-orange-500 text-lg">تلفن همراه</span>
@@ -89,6 +149,7 @@
       <div class="">
         <img src="/assets/images/Single Product/Gallery - 4.png" alt="iphone" />
       </div>
+
       <!-- product discription -->
       <div class="">
         <div class="text-center">
@@ -100,6 +161,7 @@
           </h2>
         </div>
       </div>
+
       <!-- color selection -->
       <div class="flex justify-around items-center w-full">
         <span class="text-xl font-medium text-slate-800">انتخاب رنگ:</span>
@@ -182,9 +244,10 @@
           </div>
         </div>
       </div>
+
       <!-- seller detail -->
       <div
-        class="text-slate-800 flex items-center justify-center text-md gap-x-6 gap-y-3 flex-wrap bg-red-200"
+        class="text-slate-800 flex items-center justify-center text-md gap-x-6 gap-y-3 flex-wrap"
       >
         <div class="flex items-center">
           <div class="flex items-center">
