@@ -253,12 +253,29 @@
           class="flex flex-col mb-6 items-center md:flex-auto md:flex-row md:justify-start md:items-start"
         >
           <!-- product image -->
-          <div class="flex items-center justify-center mb-9">
+          <div class="flex items-center justify-center mb-9 flex-col md:ml-1">
             <img
-              src="/assets/images/Single Product/Gallery.png"
+              src="/assets/images/Single Product/Gallery - 4.png"
               alt="iphone"
-              class="w-60"
+              class="w-60 md:mb-4"
             />
+            <div class="hidden md:flex items-center gap-x-2">
+              <img
+                src="/assets/images/Single Product/Gallery - 3.png"
+                alt="iphone"
+                class="w-16 border-2 border-gray-300 rounded-lg cursor-pointer"
+              />
+              <img
+                src="/assets/images/Single Product/Gallery - 4.png"
+                alt="iphone"
+                class="w-16 border-2 border-gray-300 rounded-lg cursor-pointer p-1"
+              />
+              <img
+                src="/assets/images/Single Product/Gallery - 2.png"
+                alt="iphone"
+                class="w-16 border-2 border-gray-300 rounded-lg cursor-pointer p-1"
+              />
+            </div>
           </div>
 
           <div
@@ -318,7 +335,9 @@
 
             <!-- color selection -->
             <hr class="md:border-1 w-full" />
-            <div class="flex justify-around items-center w-full">
+            <div
+              class="flex justify-around md:justify-between items-center w-full"
+            >
               <span
                 class="text-lg md:text-sm lg:text-lg font-medium text-slate-800"
                 >انتخاب رنگ:</span
@@ -524,7 +543,7 @@
 
             <!-- prodoct info -->
             <div
-              class="bg-white md:bg-none md:shadow-none w-full rounded-lg shadow-lg p-4 pt-0"
+              class="bg-white md:bg-none md:shadow-none w-full rounded-lg shadow-lg p-4 md:p-0"
             >
               <h3 class="font-medium text-lg md:text-sm lg:text-lg mb-4">
                 ویژگی‌های کالا:
@@ -730,19 +749,20 @@
     <div
       class="md:hidden fixed bottom-0 ring-0 left-0 w-full rounded-tr-lg rounded-tl-lg"
     >
-    <div class="bg-stone-50 px-8 py-2 flex items-center justify-between rounded-tr-lg rounded-tl-lg shadow-[0_-4px_8px_0_rgba(0,0,0,0.1)]">
-
-      <button
-        class=" bg-orange-400 cursor-pointer py-3 px-6 mt-2 rounded-md text-white font-medium"
+      <div
+        class="bg-stone-50 px-8 py-2 flex items-center justify-between rounded-tr-lg rounded-tl-lg shadow-[0_-4px_8px_0_rgba(0,0,0,0.1)]"
       >
-        اضافه به سبد خرید
-      </button>
+        <button
+          class="bg-orange-400 cursor-pointer py-3 px-6 mt-2 rounded-md text-white font-medium"
+        >
+          اضافه به سبد خرید
+        </button>
 
-      <div class="font-medium text-xl text-slate-800 text-end">
-        <span>۲۸,۲۵۰,۰۰۰</span>
-        <span>تومان</span>
+        <div class="font-medium text-xl text-slate-800 text-end">
+          <span>۲۸,۲۵۰,۰۰۰</span>
+          <span>تومان</span>
+        </div>
       </div>
-    </div>
     </div>
 
     <!-- alpine js -->
