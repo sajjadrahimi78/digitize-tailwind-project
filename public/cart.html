@@ -48,153 +48,276 @@
       </div>
     </header>
 
-    <!-- cart -->
-    <div class="mb-6 px-4 flex flex-col gap-3">
-      <!-- single cart -->
-      <div
-        class="bg-white rounded-lg shadow-lg flex items-center justify-between p-4 gap-4"
-      >
-        <span>
-          <img src="/assets/images/Cart/1.png" alt="" class="w-12" />
-        </span>
-        <div class="flex flex-col gap-y-4 flex-1">
-          <span class="text-slate-800 font-medium text-base md:text-lg"
-            >ساعت هوشمند اپل سری ۶</span
-          >
-          <div class="flex gap-1 text-orange-700 font-medium">
-            <span>۲,۲۵۰,۰۰۰</span>
-            <span>تومان</span>
-          </div>
-        </div>
-        <div class="flex flex-col items-end gap-y-5">
-          <span class="text-orange-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
+    <!-- navbar -->
+    <nav
+      class="hidden md:block p-2 gap-x-4 bg-white shadow-lg sticky top-0 z-50 mb-6 px-4"
+    >
+      <div class="container mx-auto 2xl:max-w-screen-2xl flex items-center">
+        <!-- menu -->
+        <div class="flex flex-1 items-center">
+          <span class="py-4 w-20">
+            <img
+              src="/assets/images/logo/Desktop Logo.png"
+              alt="dacktop logo"
+            />
           </span>
-          <div class="flex items-center gap-2">
-            <span
-              class="bg-gray-300 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-slate-800"
-              >+</span
+          <ul class="flex items-center w-full text-sm lg:text-lg font-normal">
+            <li
+              class="flex p-2 hover:bg-gray-50 rounded-lg pr-4 cursor-pointer"
             >
-            <span class="border-2 border-orange-500 p-1.5 rounded-md text-lg"
-              >۱</span
-            >
-            <span
-              class="bg-orange-200 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-orange-500"
-              >-</span
-            >
+              <a href="#">خانه</a>
+            </li>
+            <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <a href="#">تلفن همراه</a>
+            </li>
+            <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <a href="#">لپ تاپ</a>
+            </li>
+            <li class="flex p-2 hover:bg-gray-50 rounded-lg cursor-pointer">
+              <a href="#">ساعت هوشمند</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- search -->
+        <div class="flex flex-1">
+          <div class="w-full relative">
+            <span class="absolute top-4 right-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 text-slate-800 font-medium"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </span>
+            <input
+              type="search"
+              class="w-full bg-stone-100 py-4 px-5 pr-12 rounded-lg focus:outline-none outline-0 text-slate-800"
+              placeholder="جستجوی  نام محصول، نام برند، نام مدل و..."
+            />
           </div>
         </div>
       </div>
-      <div
-        class="bg-white rounded-lg shadow-lg flex items-center justify-between p-4 gap-4"
-      >
-        <span>
-          <img src="/assets/images/Cart/1.png" alt="" class="w-12" />
-        </span>
-        <div class="flex flex-col gap-y-4 flex-1">
-          <span class="text-slate-800 font-medium text-base md:text-lg"
-            >ساعت هوشمند اپل سری ۶</span
-          >
-          <div class="flex gap-1 text-orange-700 font-medium">
-            <span>۲,۲۵۰,۰۰۰</span>
-            <span>تومان</span>
+    </nav>
+
+    <div class="md:flex container mx-auto">
+      <!-- cart item-->
+      <div class="mb-6 px-4 flex flex-col gap-3 md:w-3/4 md:pr-0">
+        <!-- single cart -->
+        <div
+          class="bg-white rounded-lg shadow-lg flex items-center justify-between p-4 gap-4"
+        >
+          <span>
+            <img src="/assets/images/Cart/1.png" alt="" class="w-12" />
+          </span>
+          <div class="flex flex-col gap-y-4 flex-1">
+            <span class="text-slate-800 font-medium text-base md:text-lg"
+              >ساعت هوشمند اپل سری ۶</span
+            >
+            <div class="flex gap-1 text-orange-700 font-medium">
+              <span>۲,۲۵۰,۰۰۰</span>
+              <span>تومان</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-y-5">
+            <span class="text-orange-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-gray-300 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-slate-800"
+                >+</span
+              >
+              <span class="border-2 border-orange-500 p-1.5 rounded-md text-lg"
+                >۱</span
+              >
+              <span
+                class="bg-orange-200 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-orange-500"
+                >-</span
+              >
+            </div>
           </div>
         </div>
-        <div class="flex flex-col items-end gap-y-5">
-          <span class="text-orange-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
-              />
-            </svg>
+        <div
+          class="bg-white rounded-lg shadow-lg flex items-center justify-between p-4 gap-4"
+        >
+          <span>
+            <img src="/assets/images/Cart/1.png" alt="" class="w-12" />
           </span>
-          <div class="flex items-center gap-2">
-            <span
-              class="bg-gray-300 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-slate-800"
-              >+</span
+          <div class="flex flex-col gap-y-4 flex-1">
+            <span class="text-slate-800 font-medium text-base md:text-lg"
+              >ساعت هوشمند اپل سری ۶</span
             >
-            <span class="border-2 border-orange-500 p-1.5 rounded-md text-lg"
-              >۱</span
+            <div class="flex gap-1 text-orange-700 font-medium">
+              <span>۲,۲۵۰,۰۰۰</span>
+              <span>تومان</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-y-5">
+            <span class="text-orange-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-gray-300 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-slate-800"
+                >+</span
+              >
+              <span class="border-2 border-orange-500 p-1.5 rounded-md text-lg"
+                >۱</span
+              >
+              <span
+                class="bg-orange-200 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-orange-500"
+                >-</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-lg shadow-lg flex items-center justify-between p-4 gap-4"
+        >
+          <span>
+            <img src="/assets/images/Cart/1.png" alt="" class="w-12" />
+          </span>
+          <div class="flex flex-col gap-y-4 flex-1">
+            <span class="text-slate-800 font-medium text-base md:text-lg"
+              >ساعت هوشمند اپل سری ۶</span
             >
-            <span
-              class="bg-orange-200 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-orange-500"
-              >-</span
-            >
+            <div class="flex gap-1 text-orange-700 font-medium">
+              <span>۲,۲۵۰,۰۰۰</span>
+              <span>تومان</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-end gap-y-5">
+            <span class="text-orange-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+            <div class="flex items-center gap-2">
+              <span
+                class="bg-gray-300 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-slate-800"
+                >+</span
+              >
+              <span class="border-2 border-orange-500 p-1.5 rounded-md text-lg"
+                >۱</span
+              >
+              <span
+                class="bg-orange-200 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-orange-500"
+                >-</span
+              >
+            </div>
           </div>
         </div>
       </div>
-      <div
-        class="bg-white rounded-lg shadow-lg flex items-center justify-between p-4 gap-4"
-      >
-        <span>
-          <img src="/assets/images/Cart/1.png" alt="" class="w-12" />
-        </span>
-        <div class="flex flex-col gap-y-4 flex-1">
-          <span class="text-slate-800 font-medium text-base md:text-lg"
-            >ساعت هوشمند اپل سری ۶</span
-          >
-          <div class="flex gap-1 text-orange-700 font-medium">
-            <span>۲,۲۵۰,۰۰۰</span>
-            <span>تومان</span>
+
+      <!-- cart sammary -->
+      <div class="md:w-1/3 lg:w-1/4 mb-48">
+        <div
+          class="bg-white rounded-lg flex flex-col p-4 mx-4 gap-6 mt-12 md:mx-0 md:mt-0"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-slate-900 font-medium text-base xl:text-lg"
+              >مجموع قیمت:</span
+            >
+            <div class="text-orange-600 font-medium text-base xl:text-lg">
+              <span>۶,۶۵۰,۰۰۰</span>
+              <span>تومان</span>
+            </div>
           </div>
-        </div>
-        <div class="flex flex-col items-end gap-y-5">
-          <span class="text-orange-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18 18 6M6 6l12 12"
+          <span class="text-slate-700 font-medium text-base md:hidden"
+            >کد تخفیف دارید؟</span
+          >
+          <div
+            class="hidden md:flex items-center justify-between text-base xl:text-lg font-normal"
+          >
+            <span>کد تخفیف:</span>
+            <div class="bg-orange-500 rounded-lg">
+              <input
+                type="text"
+                class="w-16 lg:w-20 py-2 px-3 lg:py-3 lg:px-4 border-2  !border-gray-500 border-l-0 rounded-r-lg focus:border-none form-input"
               />
-            </svg>
-          </span>
-          <div class="flex items-center gap-2">
-            <span
-              class="bg-gray-300 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-slate-800"
-              >+</span
+              <button
+                class="py-2 px-3 text-white rounded-l-lg border-2  border-orange-500 bg-orange-500"
+              >
+                تایید
+              </button>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center justify-between">
+            <span class="text-slate-900 font-medium text-base xl:text-lg"
+              >تخفیف:</span
             >
-            <span class="border-2 border-orange-500 p-1.5 rounded-md text-lg"
-              >۱</span
+            <div class="text-slate-700 font-medium text-base xl:text-lg">
+              <span>۲۵۰,۰۰۰</span>
+              <span>تومان</span>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center justify-between">
+            <span class="text-slate-900 font-medium text-base xl:text-lg"
+              >مجموع قیمت:</span
             >
-            <span
-              class="bg-orange-200 w-4 h-4 flex items-center justify-center text-base font-bold p-3 rounded-full text-orange-500"
-              >-</span
-            >
+            <div class="text-orange-600 font-medium text-base xl:text-lg">
+              <span>۶,۶۵۰,۰۰۰</span>
+              <span>تومان</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-
+    <!-- bottom sell -->
+    <div class="w-full mx-auto px-4 fixed bottom-20">
+      <button
+        class="w-full bg-orange-400 cursor-pointer py-4 px-8 rounded-md text-white font-bold text-2xl"
+      >
+        ادامه فرآیند خرید
+      </button>
+    </div>
 
     <!-- bottom navigation -->
     <div
