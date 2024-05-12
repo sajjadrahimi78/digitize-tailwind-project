@@ -279,10 +279,10 @@
             <div class="bg-orange-500 rounded-lg">
               <input
                 type="text"
-                class="w-16 lg:w-20 py-2 px-3 lg:py-3 lg:px-4 border-2  !border-gray-500 border-l-0 rounded-r-lg focus:border-none form-input"
+                class="w-16 lg:w-20 py-2 px-3 lg:py-3 lg:px-4 border-2 !border-gray-500 border-l-0 rounded-r-lg focus:border-none form-input"
               />
               <button
-                class="py-2 px-3 text-white rounded-l-lg border-2  border-orange-500 bg-orange-500"
+                class="py-2 px-3 text-white rounded-l-lg border-2 border-orange-500 bg-orange-500"
               >
                 تایید
               </button>
@@ -307,13 +307,27 @@
             </div>
           </div>
         </div>
+
+        <!-- button sell desktop -->
+        <div class="hidden md:flex flex-col gap-2 mt-4">
+          <button
+            class="bg-orange-400 cursor-pointer py-2 px-4 rounded-md text-white font-bold text-lg border-2 border-orange-400"
+          >
+            ادامه فرآیند خرید
+          </button>
+          <button
+            class="text-orange-400 cursor-pointer py-2 px-4 rounded-md bg-white font-bold text-lg border-2 border-orange-400"
+          >
+            انصراف از خرید
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- bottom sell -->
+    <!-- button sell -->
     <div class="w-full mx-auto px-4 fixed bottom-20">
       <button
-        class="w-full bg-orange-400 cursor-pointer py-4 px-8 rounded-md text-white font-bold text-2xl"
+        class="w-full bg-orange-400 cursor-pointer py-4 px-8 rounded-md text-white font-bold text-2xl md:hidden"
       >
         ادامه فرآیند خرید
       </button>
